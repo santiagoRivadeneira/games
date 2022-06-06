@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container d-flex justify-content-center">
+        <div class="d-flex justify-content-center ali">
+
+            <input type="number" class="my-5" [(ngModel)]="numero" />  
+
+            <button type="submit" *ngIf="intentos === 3" class="my-5"  (click)="volverJugar()">
+                 Volver a Jugar
+            </button>
+            
+            <button type="submit" *ngIf="intentos !== 3" class="my-5" (click)="AdivinarNumero(numero)">
+                Aceptar
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

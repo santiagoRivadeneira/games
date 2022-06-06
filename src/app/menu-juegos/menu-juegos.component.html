@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d-flex flex-row " style="background-color: rgb(255, 217, 0); ">
+
+        <div *ngFor="let juego of juegos" >
+    
+            <div class="card d-flex my-5" style="width: 18rem; margin-left: 10rem; border: 0.5px solid black;">
+              
+              <img class="card-img-top" src="{{juego.image}}" alt="Card image cap" style="height: 300px; border: 1px solid black;">
+    
+              <div class="card-body ">
+                  <h5 class="card-title">{{juego.title}}</h5>
+                  <p class="card-text">{{juego.description}}</p>
+                  <a href="{{juego.rute}}" class="btn btn-primary">Jugar</a>
+              </div>
+              
+            </div>
+        </div>
+    
+      </div>
+    
+</body>
+</html>
