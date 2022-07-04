@@ -16,34 +16,36 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container ">
-        <div class="d-flex justify-content-center mt-5">
-            <div class="mt-5" >
-                <h4>Registrarse</h4>
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Email</label>
-                    <input 
-                        type="email" 
-                        class="form-control" 
-                        id="formGroupExampleInput" 
-                        placeholder="Ingrese Correo"
-                        [(ngModel)]="email"
-                    />
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="container ">
+            <div class="d-flex justify-content-center mt-5">
+                <div class="mt-5" >
+                    <h4>Registrarse</h4>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Email</label>
+                        <input 
+                            formControlName="correo"
+                            type="email" 
+                            class="form-control" 
+                            id="formGroupExampleInput" 
+                            placeholder="Ingrese Correo"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Contraseña</label>
+                        <input 
+                            type="password" 
+                            class="form-control" 
+                            id="formGroupExampleInput2" 
+                            placeholder="Ingrese Contraseña"
+                            formControlName="contraseña"
+                        />
+                    </div>
+                        <input type="submit" class="btn btn-primary mt-3 justify-content-center" value=" Registrarse">
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Contraseña</label>
-                    <input 
-                        type="password" 
-                        class="form-control" 
-                        id="formGroupExampleInput2" 
-                        placeholder="Ingrese Contraseña"
-                        [(ngModel)]="pass"
-                    />
-                </div>
-                    <input type="button" class="btn btn-primary mt-3 justify-content-center" (click)="SignUp()" value=" Iniciar Sesion">
             </div>
         </div>
-    </div>
+    </form>
     
 </body>
 </html>

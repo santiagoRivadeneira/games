@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Piedra pepl o tijera</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <header>
+    <h1>Piedra papel o Tijeras</h1>
+  </header>
+
+  <div class="score-board">
+    <div class="badge" id="user-label">user : {{userSelected}}</div>
+    <div class="badge" id="comp-label">comp : {{compSelected}}</div>
+    <span id="user-score">{{userScore}}</span>:<span id="comp-score">{{compScore}}</span>
+  </div>
+  
+  <div class="result">
+    <p *ngIf="status">{{userSelected}} {{action}} {{compSelected}}{{status}} </p>
+  </div>
+  
+  <div class="choices">
+    <div class="choice" id="rock">
+      <img src="../assets/rockD.jpg" (click)='userPick("rock")'>
+    </div>
+    <div class="choice" id="paper">
+      <img src="../assets/papel.jpg" (click)='userPick("paper")'>
+    </div>
+    <div class="choice" id="scissors">
+      <img src="../assets/tijeraD.jpg" (click)='userPick("scissors")'>
+    </div>
+  </div>
+  
+  <p id="action-message" *ngIf="!status">You Can Make Your Move</p>
+  <p id="action-message" *ngIf="status">Wait...</p>
+
+
+
+
+</body>
+</html>

@@ -15,5 +15,11 @@ export const JUEGOS: Juego[] = [
       rute: "/ahorcado", 
       image: "assets/ahorcadoPortada.png"
     },
+    { id: 2, 
+      title: "Piedra Papel o Tijera", 
+      description: "puedes elegir 3 opciones, una siempre mata a la otra, al mejor de 3 ganaras la partida ", 
+      rute: "/pptijeras", 
+      image: "assets/portadappt.jpg"
+    },
 
   ];
